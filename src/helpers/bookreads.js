@@ -249,8 +249,15 @@ const practiceData = {
     ]
 }
 
-const fetch_data = (searchString) => {
+const fetchData = (searchString) => {
     const endpoint = 'https://www.googleapis.com/books/v1/volumes?';
-    fetch 
     
 };
+
+const fetchPracticeData = () => {
+    return new Promise((resolve, reject) => {
+        return resolve(practiceData.items);
+    });
+}
+
+export { fetchPracticeData };

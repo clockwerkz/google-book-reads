@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import { fetchPracticeData } from '../helpers/bookreads';
 
 class BookShelf extends Component {
     state = {
-        test: 'test'
+        books: ''
+    }
+
+    componentDidMount(prevState){
+        fetchPracticeData()
+            .then(books => {
+                this.setState({books}, ()=>console.log(books[0]));
+            })
     }
 
     render() {
-       const { books } = this.props;
+       const { books } = this.state;
        return (
            <div>
                {books ? (
                 <div>
-                    <h3>There are Books</h3>
+                    <ul>
+                        {/*books.map(book => li) */}
+                    </ul>
                 </div>
                 ):(
                 <div>
