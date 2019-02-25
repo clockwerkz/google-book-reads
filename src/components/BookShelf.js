@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchPracticeData } from '../helpers/bookreads';
+import Book from './book';
 
 class BookShelf extends Component {
     state = {
@@ -19,8 +20,8 @@ class BookShelf extends Component {
            <div>
                {books ? (
                 <div>
-                    <ul>
-                        {/*books.map(book => li) */}
+                    <ul  className='bookshelf'>
+                        {books.map((book, index) => (<Book key={index} book={book} />))}
                     </ul>
                 </div>
                 ):(

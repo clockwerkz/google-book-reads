@@ -1,0 +1,17 @@
+.bookshelf {
+    list-style: none;
+    display: flex;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+}
+
+.book__image-container {
+    width: 128px;
+}
+
+.book__image-thumbnail {
+    width: 100%;
+}
