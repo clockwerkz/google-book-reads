@@ -249,9 +249,12 @@ const practiceData = {
     ]
 }
 
-const fetchData = (searchString) => {
-    const endpoint = 'https://www.googleapis.com/books/v1/volumes?';
-    
+const fetchData = async (searchString) => {
+    const endpoint = `https://www.googleapis.com/books/v1/volumes?q=${searchString}`;
+    console.log(endpoint);
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    return data.items;
 };
 
 const fetchPracticeData = () => {
@@ -260,4 +263,4 @@ const fetchPracticeData = () => {
     });
 }
 
-export { fetchPracticeData };
+export { fetchPracticeData, fetchData };

@@ -1,11 +1,14 @@
 .bookshelf {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book {
     display: flex;
     flex-direction: column;
+    width: 140px;
+    margin: 0 .25rem;
 }
 
 .book__image-container {
