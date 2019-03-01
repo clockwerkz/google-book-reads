@@ -1,0 +1,2 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,600);*{margin:0;padding:0}.bookshelf{list-style:none;-webkit-flex-wrap:wrap;flex-wrap:wrap}.book,.bookshelf{display:-webkit-flex;display:flex}.book{-webkit-flex-direction:column;flex-direction:column;width:140px;margin:0 .25rem}.book__image-container{width:128px}.book__image-thumbnail{width:100%}body{font-family:Poppins,sans-serif}h3{font-size:1.25rem}p{font-size:.8rem}
+/*# sourceMappingURL=main.26703907.chunk.css.map */
