@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BookShelf from './BookShelf';
-import { fetchPracticeData, fetchData } from '../helpers/bookreads';
+import { fetchData } from '../helpers/bookreads';
 
 class Main extends Component {
 
@@ -19,9 +19,10 @@ class Main extends Component {
         if (this.state.searchText) {
             const books = await fetchData(this.state.searchText);
             if (books) {
-                this.setState({ books });
-            }
+                return this.setState({ books });
+            } 
         }
+        this.setState({ books: '' });
     }
 
     render() {
