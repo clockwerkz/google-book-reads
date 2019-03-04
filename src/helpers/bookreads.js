@@ -1,5 +1,5 @@
 const fetchData = async (searchString) => {
-    const endpoint = `http://localhost:3000/books/${searchString}/30`;
+    const endpoint = `https://mighty-bayou-34376.herokuapp.com/books/${searchString}/30`;
     console.log(endpoint);
     return fetch(endpoint)
         .then(res => res.json())
